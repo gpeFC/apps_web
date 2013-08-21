@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Tabla Ejemplo</title>
+      <style>
+         *{
+            font-family: purisa;
+         }
+         thead th{
+            border-collapse:collapse;
+            border: 1px solid black;
+            color:#FFFF00;
+            background-color:red;
+            font-size: 30px;
+         }
+         table{
+            border-collapse:collapse;
+            text-align: center;
+            color:black;
+            background-color:#FFFF00;
+            
+         }
+         tbody td{
+            border: 1px solid black;
+         }
+      </style>
+   </head>
+   <body>
+      <table summary = "Todos los valores recabados.">
+         <caption>Tabla de Datos</caption>
+         <thead>
+            <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th colspan = "2">D</th>
+         </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td> 1 </td>
+               <td> 2 </td>
+               <td> 3 </td>
+               <td> 4 </td>
+               <td> 5 </td>
+            </tr>
+            <tr>
+               <td> 6 </td>
+               <td colspan = "2"> 7 </td>
+               <td> 8 </td>
+               <td> 9 </td>
+            </tr>
+            <tr>
+               <td> 10 </td>
+               <td colspan = "3"> 11 </td>
+               <td> 12 </td>
+            </tr>
+            <tr>
+               <td> 13 </td>
+               <td colspan = "4"> 14 </td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Clase Tablas</title>
+      <style>
+         thead{
+            color:white;
+            background-color:black;
+         }
+         table{
+            border-collapse:collapse;
+            text-align: center;
+         }
+         tbody td{
+            border: 1px solid black;
+         }
+      </style>
+   </head>
+   <body>
+      <table summary = "Todos los valores recabados.">
+         <caption>Tabla de valores</caption>
+         <thead>
+            <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+            <th>Encabezado 3</th>
+            <th>Encabezado 4</th>
+         </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>Valor 1</td>
+               <td>Valor 2</td>
+               <td>Valor 3</td>
+               <td>Valor 4</td>
+               <td>Valor 5</td>
+            </tr>
+            <tr>
+               <td colspan = "2">Valor 1</td>
+               <td>Valor 2</td>
+               <td>Valor 3</td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <td colspan = "3" style = "text-align:right;">Suma</td>
+               <td  style = "border: 1px solid black;"> $0000.000</td>
+            </tr>
+         </tfoot>
+      </table>
+   </body>
+</html>

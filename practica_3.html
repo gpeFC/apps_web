@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8"/>
+      <title> Más elementos </title>
+
+      <style>
+  
+         *{
+             font-family: sans-serif;
+          } 
+
+         header{
+            text-align: center;
+         }
+/* Este es un comentario... */
+         .fondo_negro{
+            background-color:#000;
+            color: white;
+         }
+         #encabezado{
+           border: 1px solid red;
+         }
+         .texto-rojo{
+            color: red;
+         }
+      </style>
+
+   </head>
+<body>
+   
+   <header id = "encabezado" class = "fondo_negro" >
+      <nav>
+         <ul>
+            <li> Inicio  </li>
+            <li> Página 1 </li>
+            <li> Página 2 </li>
+         </ul>
+      </nav>
+   </header>
+   
+   <h1> Titulos </h1>
+   <h6> El titulo más pequeño </h6>
+   <ol>
+      <li> Uno </li>
+      <li> Dos </li>
+      <li> Tres </li>
+      <li>  Cuatro </li>
+   </ol>
+   <ul>
+      <li><a href = "http://www.google.com"> ¡Buscar! </a></li>
+   </ul>
+<!--
+   Nuevas etiquetas...
+-->
+
+   <section>
+      <h2> Titulo de la Sección </h2>
+      <p> El contenido de mi sección. Loremipsum bla bla bla. </p>
+   </section>
+
+   <article>
+      <p> El primer párrafo de mi artículo </p>
+      <p> El segundo párrafo de mi artículo </p>
+
+      <aside>
+       <img src = "imgs/monedas.jpg" alt = "Foto de Monedas" title = "Monedas.jpg"  / >
+       <p> Aquí va mi aside. </p>
+      </aside>
+   </article>
+
+<!---
+   Este es el pie
+-->
+
+   <blockquote>
+      "El respeto al derecho ajeno es la paz."
+       <p><cite>Benito Juarez</cita>1800</p>
+   </blockquote>
+
+   <small>
+      Letras como de un contrato.
+   </small>
+   
+   
+   
+   <!-- 
+      Listas de Definición.
+   -->
+   
+   <dl>
+      <dt>body</dt>
+      <dd>En el body va todo el contenido de la página.</dd>
+      <dt>head</dt>
+      <dd>En el head van los metadatos, en titulo y las importaciones.</dd>
+   </dl>
+   
+   <canvas id = "micanvas" width = "600" height = "300">
+     Actualiza tu navegador para ver este contenido.
+   <script type = "text/javascript">
+      function drawCanvas(){
+         var c = document.getElementById('micanvas');
+         var contexto = c.getContext('2d');
+         contexto.strokeStyle = "#000000";
+         contexto.fillStyle = "red";
+         contexto.fillRect(10, 20, 280, 280);
+         contexto.strokeRect(10, 20, 280, 280);
+      }
+     // drawCanvas();
+   </script>
+   </canvas>
+
+   <footer class = "fondo_negro ancho_100 transparente texto-rojo">
+      <p> [C]opyright Facultad de Ciencias UAEM. </p>
+   </footer>
+ 
+</body>
+</html>

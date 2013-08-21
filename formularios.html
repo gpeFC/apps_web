@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8"/>
+      <title>Formularios</title>
+   </head>
+   <body>
+      <form action = "/patch/al/script">
+         <fieldset>
+            <legend>Datos Personales</legend>
+            
+            <ol>
+               <li>
+                  <label for = "txt_nombre">Nombre Completo</label>
+                  <input type = "text" name = "nombre" required id = "txt_nombre" placeholder = "Escribe tu nombre"  />
+               </li>
+               <li>
+                  <label for = "txt_correo">Correo Electrónico</label>
+                  <input type = "email" name = "correo" autofocus id = "txt_correo" />
+               </li>
+               <li>
+                  <label for = "txt_telfono">Teléfono</label>
+                  <input type = "tel" name = "telefono" id = "txt_telefono" />
+               </li>
+               <li>
+                  <label for = "txt_url">Página de Internet</label>
+                  <input type = "url" name = "url" id = "txt_url" />
+      <!--        <label>Buscar algo:</label>
+                  <input type = "search" name = "buscar"/>
+      -->         
+               </li>
+               <li>
+                  <label for = "ckbox_edad">¿Eres mayor de edad?</label>
+                  <input type = "checkbox" name = "mayordeedad" value = "1" id = "ckbox_edad" checked />
+               </li>
+               
+               <li>
+                  Color favorito: 
+                  <ul>
+                     <li>
+                        <input type = "radio" name = "azul" id = "rdo_azul" value = "azul" />
+                        <label for = "rdo_azul">Azul</label>
+                     </li>
+                     <li>
+                        <input type = "radio" name = "morado" id = "rdo_morado" value = "morado" />
+                        <label for = "rdo_morado">Morado</label>
+                     </li>
+                     <li>
+                        <input type = "radio" name = "rojo" id = "rdo_rojo" value = "rojo" />
+                        <label for = "rdo_rojo">Rojo</label>
+                     </li>
+                  </ul>
+               </li>
+               
+               <li>
+                  <label>Color favorito 2</label>
+                  <input type "text" name = "color_fav" id = "fav_col" list = "color" />
+                  <datalist id = "color">
+                     <option value = "Azul"/>
+                     <option value = "Morado"/>
+                     <option value = "Rojo"/>
+                     <option value = "Verde Hulk"/>
+                  </datalist>
+               </li>
+               
+               <li>
+                  <label for = "sel_color">Color favorito 3</label>
+                  <select id = "sel_color">
+                     <option>Azul</option>
+                     <option>Morado</option>
+                     <option>Rojo</option>
+                     <option>Verde Hulk</option>
+                     <option>Salmon</option>
+                     <option>Amarillo Mostaza</option>
+                  </select>
+               </li>
+               
+               <li>
+                  <label for = "txa_comentarios">Comentarios</label>
+                  <textarea name = "comentarios" id = "txa_comentarios" rows = "4" cols = "60" ></textarea>
+               </li>
+               
+            </ol>
+           
+            <input type = "submit" values = "Enviar"/>
+
+         </fieldset>
+      </form>
+   </body>
+</html>
