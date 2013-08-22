@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Clase de Estilos CSS</title>
+      
+      <style>
+         
+         /* Selector simple de tipo o etiqueta. */
+         h1{
+            color:red;
+         }
+         
+         /* Selector simple de identificador.*/
+         #encabezado{
+            position:absolute;
+            top:0;
+            right:0;
+         }
+         
+         /* Selector simple de clase. */
+         .boton{
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+         }
+         
+         /* Selector simple de pseudo clase. */
+         a:hover{
+            color: green;
+         }
+         
+         /* Selector de descendiente. */
+         div p{
+            font-size: 20px;
+         }
+         div#otro_div{position:absolute;
+            bottom:0;
+            color:#FF00FF;
+         }
+         
+         /* Selector de hijo(primer descendiente). */
+         ul > li{
+            color:green;
+         }
+         
+         /* Selector de sibling(hermano). */
+         li+li{
+            font-size:8px;
+         }
+         
+         /* Reglas de important. NOTA: NO USAR!!! */
+         div{
+            position:relative !important;
+         }
+         
+      </style>
+      
+   </head>
+   <body>
+      
+      <h1>Titulo de la página</h1>
+      
+      <div id = "encabezado"><p>Este es el <strong>encabezado</strong></p></div>
+      <div id = "otro_div"><p>Este es otro <strong>encabezado</strong></p></div>
+      
+      <p>Parrafo de muestra</p>
+      
+      <a class = "boton">Boton 1</a>
+      
+      <ul>
+         <li>Fruta</li>
+            <ol>
+               <li>Kiwi</li>
+               <li>Fresa</li>
+               <li>Manzana</li>
+               <li>Platano</li>
+            </ol>
+         <li>Huevo</li>
+         <li>Leche</li>
+         <li>Harina</li>
+      </ul>
+      
+   </body>
+</html>
