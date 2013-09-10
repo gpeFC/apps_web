@@ -3,15 +3,60 @@
 <head> 
 <meta charset = "utf-8"/>
 <title>¿Quién quiere ser millonario?</title>
+<link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
 	<section id="pregunta">Aquí va la pregunta.</section>
-	<section id="resp1">Respuesta1</section>
-	<section id="resp2">Respuesta2</section>
-	<section id="resp3">Respuesta3</section>
-	<section id="resp4">Respuesta4</section>
-	<nav id="iniciar">Nuevo Juego</nav>
-	<div id="wrap_premio">$<span id="premio">0</span></div>
+	<section id="resp1" class="respuesta rizq">Respuesta1</section>
+	<section id="resp2" class="respuesta rder">Respuesta2</section>
+	<section id="resp3" class="respuesta rizq">Respuesta3</section>
+	<section id="resp4" class="respuesta rder">Respuesta4</section>
+	<nav id="iniciar" class="panel_sup">Nuevo Juego</nav>
+	<div id="wrap_premio" class="panel_sup">$<span id="premio">0</span></div>
+
+	<script>
+
+		var preguntas_faciles=[
+			["¿Cómo se declara una variable en JavaScript?", "var i=0", "i=0", "int i=0;", "$i=0"],
+			["¿Cómo se llama el creador de C?", "Dennis Ritchie", "Brian Kernighan", "Alan Turgin", "Freddy Mercury"]
+		];
+
+		var preguntas_medis=[
+			["¿En qué año nacio James Gosling?", "19/05/1955", "24/04/1992", "21/03/1972", "30/01/2015"],
+			["¿Qué famoso personaje y desarrollador, que actualmente trabaja en DropBox?"]
+		];
+
+		//ToDo Agregar más preguntas!!!
+		//Arregla con los premios.
+		var cantidades = [100,200,300,500,1000,2000,4000,8000,16000,32000,64000,125000];
+
+		//Variables para llevar el estado actual.
+		var premio_actual = null;
+		var pregunta_actual = null;
+		var respuestas = ["R1", "R2", "R3", "R4"];
+		var preguntas = [1,2] 
+		var ps = null;
+
+		//Funciones auxiliares copiadas de Internet.
+		function shuffle(o){
+			for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i],  )
+		}
+
+		function cambia_pregunta(){
+			var = resp = shuffle(respuestas);
+
+			if(pregunta_actual==0 | pregunta_actual==5 | pregunta_actual==10)
+				ps = shuffle(preguntas);
+			if(pregunta_actual<5){
+				//Cambiar la preguntas.
+				$("#pregunta").html(preguntas_faciles[ps[pregunta_actual]][0])
+				//Reset a la clase correcta en todas las preguntas.
+				$(".respuesta").remoClass("correcta");
+				$("#"+resp[0]).html(preguntas_faciles[ps[pregunta_actual][0]])
+			}
+		}
+
+	</script>
 
 </body>
 </html>
