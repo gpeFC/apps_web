@@ -1,0 +1,107 @@
+EJEMPLOS.
+
+  // Instalando Django //
+tar xzvf Django-1.5.4.tar.gz
+cd Django-1.5.4
+sudo python setup.py install
+
+
+  // Creando un proyecto //
+django-admin.py startproject mysite
+
+
+  // Servidor de desarrollo //
+python manage.py runserver
+
+
+  // Cambio de puerto //
+python manage.py runserver 8888
+
+
+  // Creando una aplicacion //
+python manage.py startapp principal
+
+
+  // Codificacion de caracteres //
+#encoding:utf-8
+
+
+  // Ruta del proyecto //
+# Identificando la ruta del proyecto.
+import os
+RUTA_PROYECTO = os.path.dirname(os.path.realpath(__file__))
+
+
+  // Administradores //
+modificar:
+ADMINS = (
+# (‘Your Name’, ‘your_email@example.com’),
+)
+==>
+ADMINS = (
+ (‘Fulano de Tal’, ‘fulano@mail.com’),
+)
+
+
+  // Configuracion de la base de datos //
+modificar:
+DATABASES = {
+‘default’: {
+‘ENGINE’: ‘django.db.backends.’, # Add ‘postgresql_psycopg2’,
+‘mysql’, ‘sqlite3’ or ‘oracle’.
+‘NAME’: ‘’, # Or path to database file if using sqlite3.
+‘USER’: ‘’, # Not used with sqlite3.
+‘PASSWORD’: ‘’, # Not used with sqlite3.
+‘HOST’: ‘’, # Set to empty string for localhost. Not used with
+sqlite3.
+‘PORT’: ‘’, # Set to empty string for default. Not used with sqlite3.
+}
+}
+==>
+DATABASES = {
+‘default’: {
+‘ENGINE’: ‘django.db.backends.sqlite3’, # Add ‘postgresql_psycopg2’,
+‘mysql’, ‘sqlite3’ or ‘oracle’.
+‘NAME’: ‘mysite.db’, # Or path to database file if using sqlite3.
+‘USER’: ‘’, # Not used with sqlite3.
+‘PASSWORD’: ‘’, # Not used with sqlite3.
+‘HOST’: ‘’, # Set to empty string for localhost. Not used with
+sqlite3.
+‘PORT’: ‘’, # Set to empty string for default. Not used with sqlite3.
+}
+}
+
+
+  // Zona horaria //
+modificar:
+TIME_ZONE = 'America/Chicago'
+==>
+TIME_ZONE = 'America/Mexico_City'
+
+
+  // Configuracion del idioma //
+modificar:
+LANGUAGE_CODE = 'en-us'
+==>
+LANGUAGE_CODE = 'en-MX'
+
+
+  // Creacion de la base de datos //
+python manage.py syncdb
+
+
+  // Direcciones del proyecto // 
+from django.conf.urls import patterns, include, url
+from django.contrib import admin
+admin.autodiscover()
+urlpatterns = patterns(‘’,
+url(r’^admin/doc/’, include(‘django.contrib.admindocs.urls’)),
+url(r’^admin/’, include(admin.site.urls)),
+)
+
+
+  // Shell //
+python manage.py shell
+
+
+  // 
