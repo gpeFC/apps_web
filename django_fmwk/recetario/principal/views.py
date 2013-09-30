@@ -80,6 +80,8 @@ def nuevo_usuario(request):
 	return render_to_response('nuevousuario.html', {'formulario':formulario}, context_instance=RequestContext(request))
 
 def ingresar(request):
+	if not request.user.is_anonymous():
+		return HttpResponseRedirect('/privado')
 	if request.method=='POST':
 		formulario = AuthenticationForm(request.POST)
 		if formulario.is_valid:
@@ -97,3 +99,13 @@ def ingresar(request):
 	else:
 		formulario = AuthenticationForm()
 	return render_to_response('ingresar.html', {'formulario':formulario}, context_instance=RequestContext(request))
+
+@login_required(login_url='/ingresar')
+def privado(request):
+	usuario = request.user
+	return render_to_response('privado.html',{'usuario':usuario}, context_instance=RequestContext(request))
+
+@login_required(login_url='/ingresar')
+def cerrar(request):
+	logout(request)
+	return HttpResponseRedirect('/')
