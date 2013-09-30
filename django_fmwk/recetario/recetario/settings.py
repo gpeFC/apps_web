@@ -77,6 +77,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(RUTA_PROYECTO,'static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -162,6 +163,6 @@ LOGGING = {
 # Configuraciones para enviar mensajes usando gmail.
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'remiten@gmail.com'
+EMAIL_HOST_USER = 'emanuel.garp@gmail.com'
 EMAIL_HOST_PASSWORD = 'clavedelcorreo'
 EMAIL_PORT = 587
