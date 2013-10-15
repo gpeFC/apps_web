@@ -1,30 +1,18 @@
-"""
-Archivos de configuraciones del proyecto. (BD, directorios, idiomas, rutas, aplicaciones, etc.)
-"""
-
-# Django settings for recetario project.
-
-#encoding:utf-8
-
-# Identificando la ruta del proyecto.
-import os
-RUTA_PROYECTO = os.path.dirname(os.path.realpath(__file__))
+# Django settings for newBlog project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-""" Administradores del proyecto. """
 ADMINS = (
-    # ('Emanuel GP', 'gpe_fc@uaem.mx'),
+    # ('Your Name', 'your_email@example.com'),
 )
 
 MANAGERS = ADMINS
 
-""" Configuración de la base de datos. """
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'recetario.db',                      # Or path to database file if using sqlite3.
+        'NAME': 'newBlog.db',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -62,12 +50,12 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = os.path.join(RUTA_PROYECTO, 'carga')
+MEDIA_ROOT = ''
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = 'http://127.0.0.1:8000/media/'
+MEDIA_URL = ''
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -84,7 +72,6 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(RUTA_PROYECTO,'static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -96,7 +83,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'hj6ni)wh-91oc#f_(9xekxx9f07lzyvy3t1romj0s4glj@2dp6'
+SECRET_KEY = 'ex*pp90o+-m$gu$9+^0a52y7#lnq2b@ifj+#3p-fc*g(92z0&d'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -115,16 +102,17 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'recetario.urls'
+ROOT_URLCONF = 'newBlog.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'recetario.wsgi.application'
+WSGI_APPLICATION = 'newBlog.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.join(RUTA_PROYECTO,'plantillas'),
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
 )
 
-""" Aplicaciones instaladas y habilitadas para ser usadas. """
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -132,9 +120,11 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.admin',
-    'django.contrib.admindocs',
-    'principal',
+    # Uncomment the next line to enable the admin:
+    # 'django.contrib.admin',
+    # Uncomment the next line to enable admin documentation:
+    # 'django.contrib.admindocs',
+    'poster',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
@@ -167,10 +157,3 @@ LOGGING = {
         },
     }
 }
-
-# Configuraciones para enviar mensajes usando gmail.
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'emanuel.garp@gmail.com'
-EMAIL_HOST_PASSWORD = 'clavedelcorreo'
-EMAIL_PORT = 587
