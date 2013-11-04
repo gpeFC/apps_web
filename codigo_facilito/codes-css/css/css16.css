@@ -1,0 +1,15 @@
+#contenido{
+	width: 800px;
+	margin: 0 auto;
+	background-color: #003399;
+	height: 1000px;
+}
+
+.div-prueba{
+	background-color: #333333;
+	height: 100px;
+	width: 300px;
+	position: absolute;
+	top: -10px;
+	left: -10px;
+}
