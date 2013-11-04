@@ -1,0 +1,15 @@
+<!-- Plantilla HTML secundaria(home)--- Project: newBlog  -->
+
+{% extends "base.html"  %}
+
+{% block title  %}Mi blog{% endblock  %}
+
+{% block content  %}
+  
+  {% for post in posts  %}
+    <h1>{{ post.title  }}</h1>
+    <p>{{ post.content  }}</p>
+    <hr>
+  {% endfor  %}  
+  
+{% endblock  %}
