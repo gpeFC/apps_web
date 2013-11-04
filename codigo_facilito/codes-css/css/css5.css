@@ -1,0 +1,25 @@
+ul li{
+	list-style-type: none;
+	font-size: 50px;
+	font-weight: bold;
+	color: #069;
+}
+
+ul li::before{
+	content: url(estrella.png);
+}
+
+ul li::after{
+	content: url(estrella.png);
+}
+
+p::first-letter{
+	font-size: 36px;
+	font-weight: bold;
+	color: #FF0000;
+}
+
+p::first-line{
+	color: #F00;
+	text-decoration: underline;
+}
