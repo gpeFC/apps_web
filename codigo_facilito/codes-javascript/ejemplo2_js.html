@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Estructuras de Control </title>
+	<script type="text/javascript">
+		/*
+		if(CONDICION){
+			CODIGO1
+		}
+		else if(CONDICION2){
+			CODIGO2
+		}
+		else{
+			CODIGO DEFAULT
+		}
+		*/
+		var edad = 18;
+		if(edad > 18)
+			alert('Eres mayor de 18 años');
+		else if(edad < 18)
+			alert('Eres menor de edad');
+		else
+			alert('Tienes 18 años');
+
+		/*
+		var variable2 =variable1?'VALOR1':'VALOR2'
+		*/
+		var aux = false;
+		var asignada = aux?'hola':'Adios'
+		alert(asignada);
+
+		/*
+		switch(variable){
+			case 'a':
+				CODIGO A
+				break;
+			case 'b':
+				CODIGO B
+				break;
+			default:
+				CODIGO DEFAULT
+				break;
+		}
+		*/
+		var a = 'Hola';
+		switch(a){
+			case 'hola':
+				alert('a = hola');
+				break;
+			case 'Hola':
+				alert('a = Hola');
+				break;
+			default:
+				alert('a = ?');
+				break;
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

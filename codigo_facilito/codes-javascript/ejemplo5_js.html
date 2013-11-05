@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Ciclos JavaScript </title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+			for(condicionInicial; condicionFinal; condicionIncremental){
+				CODIGO
+				  ...
+			}
+		*/
+		for(var i=0; i<10; i++){
+			alert(i);
+			alert('Entre');
+		}
+
+		/*
+			variableArreglo
+			for(variableItem in variableArreglo){
+				CODIGO
+				  ...
+			}
+		*/
+		var arreglo = [1, 2, 3, 4];
+		for(i in arreglo){
+			alert(arreglo[i]);
+		}
+
+		/*
+			condicionInicial
+			while(condicionFinal){
+				CODIGO
+				 ...
+				 condicionIncremental
+			}
+		*/
+		var i = 0;
+		while(i < 10){
+			alert(i);
+			i++;
+		}
+
+		/*
+			condicionInicial
+			do{
+				CODIGO
+				  ...
+				condicionInremental
+			}while(condicionFinal);
+		*/
+		var j = 10;
+		do{
+			alert(j);
+			j++;
+		}while(i < 10);
+	</script>
+</body>
+</html>

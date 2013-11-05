@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Objetos en JavaScript </title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+			var variableObjeto = new nombreClase(argumentos/parametros);
+			function nombreClase(argumentos/parametros){
+				this.variableClase = variable;
+				this.metodoClase = function(){
+					CODIGO
+					  ...
+				};
+				CODIGO
+				  ...
+			}
+			var variable = variableObjeto.variableClase;
+			variableObjeto.metodoClase();
+		*/
+		var Gato = new gato('bola de pelos');
+		var Gato2 = new gato('minino');
+		function gato(nombre){
+			this.nombre = nombre;
+			this.maulla = function(){
+				alert(this.nombre + ' miawww');
+			};
+		}
+		alert('El gato se llama ' + Gato.nombre);
+		alert('El segundo gato se llama ' + Gato2.nombre);
+		Gato.maulla();
+	</script>
+</body>
+</html>
