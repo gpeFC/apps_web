@@ -8,4 +8,4 @@ from django.template import RequestContext
 
 # Vista "Inicio".
 def inicio(request):
-    return render_to_response('inicio.html')
+    return render_to_response('inicio.html', context_instance=RequestContext(request))
