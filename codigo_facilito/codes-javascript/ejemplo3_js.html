@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Funciones </title>
+	<script type="text/javascript">
+		/*
+			function nombreFuncion(argumento/parametro){
+				variable(1)
+				variable(2)
+				   ...
+				variable(n)
+
+				EstructuraDeControl(1)
+				EstructuraDeControl(2)
+				   ...
+				EstructuraDeControl(n)
+
+				return variableResultado
+			}
+			var miVariable = nombreFuncion(argumento/parametro);
+			alert(miVariable);
+			alert(nombreFuncion(argumento/parametro));
+		*/
+		function factorial(num){
+			var fac = 1;
+			for(num; num>0; num--)
+				fac = fac * num;
+			return fac;
+		}
+		var resultado = factorial(3);
+		alert(resultado);
+		alert(factorial(5));
+
+		/*
+			var variableFuncion = function(argumento/parametro){
+				variable(1)
+				variable(2)
+				   ...
+				variable(n)
+
+				EstructuraDeControl(1)
+				EstructuraDeControl(2)
+				   ...
+				EstructuraDeControl(n)
+
+				alert(variableResultado);
+			} 
+			variableFuncion(argumento/parametro);
+		*/
+		var factorial2 = function(num){
+			var fac = 1;
+			for(num; num>0; num--)
+				fac = fac * num;
+			alert(fac);
+		}
+		factorial2(7);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

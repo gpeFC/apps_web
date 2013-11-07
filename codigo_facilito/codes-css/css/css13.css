@@ -1,0 +1,11 @@
+/*
+	3 formas basicas de agregar colores.
+	- Nombre 16 colores basicos
+	- Hexadecimal
+	- Hexadecimal corto
+*/
+
+.prueba{
+	background-color:#000;
+	color:#FFF;
+}

@@ -1,0 +1,7 @@
+body{
+	background-image: url(imgs/tux.png), url(imgs/linux-mint.png);
+	background-repeat: no-repeat, repeat;
+	background-position: center, left top;
+	background-size: 10% 10%, 25% 25%;
+	height: 500px;
+}

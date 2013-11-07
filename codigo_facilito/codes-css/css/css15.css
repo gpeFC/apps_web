@@ -1,0 +1,21 @@
+body{
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#contenido{
+	width: 800px;
+	margin: 0 auto;
+	border-right: solid;
+	border-left: solid;
+	border-width: 1px;
+	border-color: #333333;
+	height: 300px;
+}
+
+nav ul li{
+	margin-left: 20px;
+	float: left;
+}

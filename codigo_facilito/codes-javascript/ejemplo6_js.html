@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Arreglos </title>
+	<script type="text/javascript">
+		/*
+			var variableArreglo = new Array();
+			variableArreglo.push(elemento);
+			variableArreglo[indice] = VALOR;
+		*/
+		var arreglo = new Array();
+		arreglo.push(3);
+		arreglo.push('Hola Mundo!');
+		arreglo[0] = 'Emanuel GP';
+		console.log(arreglo[0]);
+
+		/*
+			var variableArreglo = [elemento(1), elemento(2), ..., elemento(N)];
+		*/
+		var arreglo2 = [1, 'Hola', 'Mundo'];
+		console.log(arreglo2.length);
+		for(i=0; i<arreglo2.length; i++)
+			console.log(arreglo2[i])
+
+		/*
+			var variableArreglo = [elemento, [elemento(1), elemento(2), ..., elemento(N)]];
+		*/
+		var arreglo3 = [1, [1, 2, 3], ['a', 'b', 'c']];
+		for(i=0; i<arreglo3[1].length; i++)
+			console.log(arreglo3[1][i]);
+		var cadena = arreglo3[2].join('');
+		console.log(cadena);
+
+		/*
+			var variableCadena = 'Cadena de Texto';
+			var variableArreglo= variableCadena.split(separador);
+		*/
+		var cadena2 = 'a-bc';
+		var arreglo4 = cadena2.split('-');
+		console.log(arreglo4[1]);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
