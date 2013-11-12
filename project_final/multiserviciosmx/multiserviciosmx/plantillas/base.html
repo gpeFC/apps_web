@@ -7,14 +7,40 @@
 	<style> {%block style_css%}{%endblock%} </style>
 </head>
 <body>
-	<header>
-		{%block encabezado%}{%endblock%}
-	</header>
-	<section class="contenido">
+	<section id="contenido">
 		{%block contenido%}{%endblock%}
+		<nav class="top-bar">
+			<ul>
+				<li><img src="{{STATIC_URL}}img/logo_1.png" height="70" width="70" /></li>
+				<li class="bar-nav"><a href="#">Inicio</a></li>
+				<li class="bar-nav"><a href="#">Contacto</a></li>
+				<li class="bar-nav"><a href="#">Registro</a></li>
+				<li class="bar-nav"><a href="#">Acceder</a></li>
+				<li class="bar-nav"><a href="#">Acerca de</a></li>
+				<li class="bar-nav"><a href="#">Redes</a></li>
+			</ul>
+		</nav>
+		<header>
+			{%block encabezado%}{%endblock%}
+			<section id="principales">
+				<div class="encabezado">
+					<img src="{{STATIC_URL}}img/banner_1.jpg" height="180" width="700" />
+				</div>
+				<div class="busqueda">
+					<img src="{{STATIC_URL}}img/icon_s.png" height="30" width="30">
+					<input id="buscar" name="busca" size="25" type="text" placeholder="Buscar en MultiServiciosMx" onfocus="value=''">
+				</div>
+				<div class="socialmedia"></div>
+			</section>
+		</header>
+
+		<div id="content">
+			<div class="div-prueba"></div>
+		</div>
+
+		<footer id="piedepagina">
+			{%block footer%}{%endblock%}
+		</footer>
 	</section>
-	<footer id="piedepagina">
-		{%block footer%}{%endblock%}
-	</footer>
 </body>
 </html>
