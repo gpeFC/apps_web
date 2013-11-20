@@ -3,7 +3,12 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', 'principal.views.inicio'),
+    url(r'^inicio/$', 'principal.views.inicio'),
+    url(r'^contacto/$', 'principal.views.contacto'),
+    url(r'^registro/$', 'principal.views.registro'),
+    url(r'^acceder/$', 'principal.views.acceder'),
+    url(r'^acercade/$', 'principal.views.acercade'),
+    url(r'^archivo/$','principal.views.archivo'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )

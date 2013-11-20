@@ -43,26 +43,4 @@ nav ul li a{
 	text-decoration: none;
 }
 
-header section div{
-	display: inline-block;
-}
 
-.encabezado{
-	margin: 10px;
-	padding-top: 10px;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
-}
-
-
-.busqueda{
-	background-color: gray;
-	height: 50px;
-	width: 680px;
-	margin: 20px;
-	padding-top: 10px;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
-}
