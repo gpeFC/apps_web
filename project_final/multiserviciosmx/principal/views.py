@@ -20,7 +20,14 @@ def contacto(request):
 
 # Vista "Registro".
 def registro(request):
-		return render_to_response('registro.html', context_instance=RequestContext(request))
+	if request.method == 'POST':
+		formulario = UserCreationForm(request.POST)
+		if formulario.is_valid:
+			formulario.save()
+			return HttpResponseRedirect('/inicio')
+		else:
+			formulario = UserCreationForm()
+	return render_to_response('registro.html', context_instance=RequestContext(request))
 
 # Vista "Acceder".
 def acceder(request):

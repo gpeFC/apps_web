@@ -3,10 +3,21 @@
 {%block titulo%} MultiServiciosMx(REGISTRO) {%endblock%}
 
 {%block style_css%}
+	<style>
+		#formulario{
+			display: inline-block;
+			position: relative;
+}
+	</style>
 {%endblock%}
 
 {%block encabezado%}
+	<h1>Registro de nuevo usuario.</h1>
 {%endblock%}
 
 {%block contenido%}
+	<form id="formulario" method="post" action="">{%csrf_token%}
+		<table>{{formulario}}</table>
+		<p><input type="submit" value="Registrar" /></p>
+	</form>
 {%endblock%}

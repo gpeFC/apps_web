@@ -4,11 +4,10 @@
 	<meta charset="utf-8">
 	<title>{%block titulo%}{%endblock%} </title>
 	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/style_base.css">
-	<style> {%block style_css%}{%endblock%} </style>
+	{%block style_css%}{%endblock%}
 </head>
 <body>
 	<section id="contenido">
-		{%block contenido%}{%endblock%}
 		<nav class="top-bar">
 			<ul>
 				<li><img src="{{STATIC_URL}}img/logo_1.png" height="70" width="70" /></li>
@@ -27,7 +26,7 @@
 		<div id="content">
 			<div class="div-prueba"></div>
 		</div>
-
+		{%block contenido%}{%endblock%}
 		<footer id="piedepagina">
 			{%block footer%}{%endblock%}
 		</footer>
