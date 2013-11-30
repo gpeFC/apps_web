@@ -9,4 +9,18 @@
 {%endblock%}
 
 {%block contenido%}
+    <h1>Pymes Registradas:</h1><br><br>
+    <ul>
+    {%for pyme in pymes%}
+        <li>
+            <h2>{{pyme.empresa}}</h2>
+            <img src="{{MEDIA_URL}}{{pyme.logo}}" />
+            <p>{{pyme.descripcion}}</p>
+            <img src="{{MEDIA_URL}}{{pyme.foto}}" /><br><br>
+        </li>
+    {%endfor%}
+    </ul>
 {%endblock%}
+
+
+

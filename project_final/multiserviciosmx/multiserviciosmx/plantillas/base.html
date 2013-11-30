@@ -7,29 +7,27 @@
 	{%block style_css%}{%endblock%}
 </head>
 <body>
-	<section id="contenido">
-		<nav class="top-bar">
-			<ul>
-				<li><img src="{{STATIC_URL}}img/logo_1.png" height="70" width="70" /></li>
-				<li class="bar-nav"><a href="/inicio">Inicio</a></li>
-				<li class="bar-nav"><a href="/contacto">Contacto</a></li>
-				<li class="bar-nav"><a href="/registro">Registro</a></li>
-				<li class="bar-nav"><a href="/acceder">Acceder</a></li>
-				<li class="bar-nav"><a href="/acercade">Acerca de</a></li>
-				<li class="bar-nav"><a href="/archivo">Archivo</a></li>
-			</ul>
-		</nav>
+	<section id="encabezado">
 		<header>
+			<nav class="top-bar">
+				<ul>
+					<li><img src="{{STATIC_URL}}img/logo_1.png" height="70" width="70" /></li>
+					<li class="bar-nav"><a href="/inicio">Inicio</a></li>
+					<li class="bar-nav"><a href="/contacto">Contacto</a></li>
+					<li class="bar-nav"><a href="/registro">Registro</a></li>
+					<li class="bar-nav"><a href="/acceder">Acceder</a></li>
+					<li class="bar-nav"><a href="/acercade">Acerca de</a></li>
+					<li class="bar-nav"><a href="/archivo">Archivo</a></li>
+				</ul>
+			</nav>
 			{%block encabezado%}{%endblock%}
 		</header>
-
-		<div id="content">
-			<div class="div-prueba"></div>
-		</div>
-		{%block contenido%}{%endblock%}
-		<footer id="piedepagina">
-			{%block footer%}{%endblock%}
-		</footer>
 	</section>
+	<section class="contenido">
+		{%block contenido%}{%endblock%}
+	</section>
+	<footer id="piedepagina">
+		{%block footer%}{%endblock%}
+	</footer>
 </body>
 </html>
